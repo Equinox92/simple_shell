@@ -24,7 +24,7 @@ int unset_alias(info_t *info, char *str)
 	int c;
 	char *a, b;
 
-	d = _strchr(str, '=');
+	a = _strchr(str, '=');
 	if (!d)
 		return (1);
 	b = *a;
@@ -99,7 +99,7 @@ int _myalias(info_t *info)
 		}
 		return (0);
 	}
-	for (a = 1; info->argv[a]; i++)
+	for (a = 1; info->argv[a]; a++)
 	{
 		d = _strchr(info->argv[a], '=');
 		if (d)
